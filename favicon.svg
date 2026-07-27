@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#6145B5"/>
-  <path d="M14 18c6-3 12-3 18 0v28c-6-3-12-3-18 0z" fill="#FFFFFF"/>
-  <path d="M50 18c-6-3-12-3-18 0v28c6-3 12-3 18 0z" fill="#E8DEFF"/>
-  <circle cx="45" cy="14" r="7" fill="#FDB333"/>
-  <path d="M45 10.5v4l2.5 2" stroke="#6C4700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="짬짬이 이야기">
+  <rect width="100" height="100" rx="24" fill="#6145B5"/>
+  <path d="M17 43c8.5-4.5 17-4.5 26 0v37c-9-4.5-17.5-4.5-26 0z" fill="#FFFFFF"/>
+  <path d="M71 43c-8.5-4.5-17-4.5-26 0v37c9-4.5 17.5-4.5 26 0z" fill="#E8DEFF"/>
+  <circle cx="76" cy="24" r="14" fill="#FFFFFF"/>
+  <path d="M76 15.5 V24.5 L82.5 28.5" fill="none" stroke="#152447" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

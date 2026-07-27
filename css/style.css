@@ -107,7 +107,7 @@ button { font-family: inherit; cursor: pointer; }
   vertical-align: -0.35em;
   user-select: none;
 }
-.brand-icon .ic { width: 1.7rem; height: 1.7rem; }
+.brand-icon .ic { width: 2.6rem; height: 2.6rem; }   /* 사이트 아이콘 — 자매 사이트 로고와 비슷한 크기로 */
 .icon-btn .ic { width: 1.7rem; height: 1.7rem; }
 .type-emoji .ic { width: 2.7rem; height: 2.7rem; }
 .done-emoji .ic { width: 4rem; height: 4rem; }
@@ -150,8 +150,8 @@ button { font-family: inherit; cursor: pointer; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent-soft);
-  border-radius: var(--radius-sm);
+  /* 사이트 아이콘(favicon.svg) 자체가 둥근 타일이라 뒤에 배경을 한 겹 더 깔지 않는다.
+     깔면 상자 안에 상자가 겹쳐 보인다. */
 }
 
 .icon-btn {
