@@ -1,7 +1,7 @@
 # 📖 짬짬이 이야기
 
 > 수업 전후 3~7분 자투리 시간, 짧은 이야기 하나로 학생이 생각하고 말하게 하는 전자칠판용 웹서비스.
-> [짬짬이 게임](https://shway81-droid.github.io/jjam/) · [짬짬이 스트레칭](https://shway81-droid.github.io/jjam-stretch/)의 자매 프로젝트입니다.
+> 짬짬이 [게임](https://shway81-droid.github.io/jjam/) · [퀴즈](https://shway81-droid.github.io/jjam-quiz/) · [영상](https://shway81-droid.github.io/jjam-video/)의 자매 프로젝트입니다.
 
 ## 특징
 
