@@ -331,7 +331,6 @@ main {
 }
 .site-footer a { color: var(--accent); font-weight: 700; text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
-.sister-links a { margin: 0 0.3rem; }
 .site-footer .credit { font-size: 0.85rem; opacity: 0.75; }
 
 /* ── 조건 선택 ── */
