@@ -105,6 +105,11 @@
     ['screen-home', 'screen-setup', 'screen-play', 'screen-done'].forEach(function (id) {
       $(id).hidden = (id !== screenId);
     });
+    // 자매 사이트 바로가기는 활동 중에만 숨긴다. 이 사이트는 상단바가 계속
+    // 떠 있어서, 발표 단계에서 눌러 다른 사이트로 나가 버릴 수 있다.
+    // (게임·퀴즈는 게임이 별도 페이지라 저절로 안 보인다.)
+    var sw = $('site-switch');
+    if (sw) sw.hidden = (screenId === 'screen-play');
     window.scrollTo(0, 0);
   }
 

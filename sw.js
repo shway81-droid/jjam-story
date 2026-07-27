@@ -11,6 +11,7 @@ var ASSETS = [
   './index.html',
   './css/style.css',
   './js/app.js',
+  './shared/jjam-switcher.js',
   './data/stories.json',
   './favicon.svg',
   './manifest.json',

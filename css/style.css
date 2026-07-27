@@ -182,6 +182,14 @@ button { font-family: inherit; cursor: pointer; }
    단, 채움색은 퍼플이 아니라 밝은 라벤더로 둔다. 이 사이트의 아이콘 세트
    (Streamline Plump Color)는 밝은 배경용 다색 아이콘이라, 퍼플 위에 얹으면
    집 모양 윤곽선이 배경에 묻혀 버린다. */
+/* 상단바 오른쪽 — [처음으로] 버튼 + 자매 사이트 바로가기를 한 줄에 둔다 */
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: none;
+}
+
 .topbar .icon-btn {
   background: var(--accent-soft);
   border-color: rgba(255, 255, 255, 0.55);
