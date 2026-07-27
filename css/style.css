@@ -2,6 +2,26 @@
    Sophisticated Card-based + Tactile Brutalism
    흰 카드 · 라벤더 배경 · 하드 드롭 섀도(0 4px 0 #241B3E) · 20px 라운드 · 2px 보더 */
 
+/* ── 웹폰트: Pretendard(가변) 자가 호스팅 ──────────────────────────
+   이전에는 jsDelivr CDN에서 받아왔다. 그 CSS는 서비스 워커 캐시 목록에 없어서
+   "한 번 열면 인터넷 없이 동작"한다는 약속과 달리 오프라인에서 폰트가 깨졌다.
+   자가 호스팅으로 바꿔 오프라인에서도 같은 글씨가 나온다.
+
+   assets/fonts/PretendardVariable.subset.woff2 는 짬짬이 4개 사이트가 실제로
+   쓰는 글자만 남긴 서브셋(290 KB)이다. 서브셋에 없는 글자는 tofu(□)가 아니라
+   font-family의 다음 순위(시스템 한글 폰트)로 자연스럽게 넘어간다.
+   새 글자가 들어왔는지는 `node scripts/check-font-coverage.mjs` 가 확인한다.
+
+   라이선스: SIL Open Font License 1.1 — assets/fonts/LICENSE.txt
+   ────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-style: normal;
+  font-weight: 45 920;                 /* 가변 굵기 축 */
+  font-display: swap;                  /* 폰트 대기 중에도 글자를 먼저 보여 준다 */
+  src: url('../assets/fonts/PretendardVariable.subset.woff2') format('woff2-variations');
+}
+
 :root {
   /* ── Surface ── */
   --bg: #fdf7ff;                 /* background / surface */

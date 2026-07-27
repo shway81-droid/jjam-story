@@ -19,3 +19,5 @@ jobs:
           node-version: '20'
       - name: 이야기 데이터 검증
         run: node scripts/validate-data.mjs
+      - name: 웹폰트 글자 커버리지 검증
+        run: node scripts/check-font-coverage.mjs

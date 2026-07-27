@@ -1,5 +1,5 @@
 /* 짬짬이 이야기 — 오프라인 캐시 (FR-11) */
-var CACHE = 'jjam-story-v3';
+var CACHE = 'jjam-story-v4';   // v4: 웹폰트 자가 호스팅 파일 추가
 var ICONS = [
   'book-1', 'home-1', 'star-medal', 'circle-clock', 'magic-wand-1', 'search-visual',
   'user-feedback-heart', 'justice-scale-2', 'lightbulb', 'shuffle', 'button-play-circle',
@@ -13,7 +13,8 @@ var ASSETS = [
   './js/app.js',
   './data/stories.json',
   './favicon.svg',
-  './manifest.json'
+  './manifest.json',
+  './assets/fonts/PretendardVariable.subset.woff2'
 ].concat(ICONS);
 
 self.addEventListener('install', function (e) {

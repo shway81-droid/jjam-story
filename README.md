@@ -65,7 +65,20 @@ node scripts/validate-data.mjs
 - Vanilla HTML/CSS/JavaScript — 프레임워크·빌드 도구 없음
 - `data/stories.json` + LocalStorage — 서버·DB 없음
 - Service Worker (network-first) — 오프라인 + 콘텐츠 갱신 반영
+- 웹폰트 자가 호스팅 — 외부 CDN 의존 없음 (아래 참고)
 - GitHub Pages 배포
+
+## 웹폰트
+
+`assets/fonts/PretendardVariable.subset.woff2` (290 KB)를 `css/style.css`의 `@font-face`로
+직접 불러옵니다. 이전에는 jsDelivr CDN에서 받아왔는데, 그 CSS가 서비스 워커 캐시 목록에 없어
+**"한 번 열면 인터넷 없이 동작"한다는 약속과 달리 오프라인에서 글씨체가 깨졌습니다.**
+
+짬짬이 4개 사이트가 실제로 쓰는 글자만 남긴 서브셋이라 원본(2 MB)보다 훨씬 가볍습니다.
+서브셋에 없는 글자는 □(tofu)가 아니라 시스템 한글 폰트로 자연스럽게 넘어갑니다.
+새 이야기를 넣다가 없는 글자가 생기면 `node scripts/check-font-coverage.mjs`가 알려 줍니다.
+
+라이선스: [SIL Open Font License 1.1](assets/fonts/LICENSE.txt) — Pretendard, Kil Hyung-jin.
 
 ## 아이콘
 
