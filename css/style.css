@@ -107,7 +107,7 @@ button { font-family: inherit; cursor: pointer; }
   vertical-align: -0.35em;
   user-select: none;
 }
-.brand-icon .ic { width: 2.6rem; height: 2.6rem; }   /* 사이트 아이콘 — 자매 사이트 로고와 비슷한 크기로 */
+.brand-icon .ic { width: 46px; height: 46px; }   /* 사이트 아이콘 — 자매 사이트 로고와 같은 크기 */
 .icon-btn .ic { width: 1.7rem; height: 1.7rem; }
 .type-emoji .ic { width: 2.7rem; height: 2.7rem; }
 .done-emoji .ic { width: 4rem; height: 4rem; }
@@ -118,15 +118,20 @@ button { font-family: inherit; cursor: pointer; }
 #btn-fav .ic { opacity: 0.4; filter: grayscale(1); transition: opacity 0.15s, filter 0.15s; }
 #btn-fav.fav-on .ic { opacity: 1; filter: none; }
 
-/* ── 상단바 ── */
+/* ── 상단바 ──
+   짬짬이 자매 사이트(게임·퀴즈·영상)와 같은 구조를 쓴다 —
+   색을 채운 띠 위에 [로고 46px + 제목 + 부제], 오른쪽에 도구 버튼.
+   띠 색만 자매의 네이비 대신 이 사이트의 퍼플을 쓴다.
+   넷을 나란히 놓으면 같은 리듬으로 읽히고, 사이트 안에서는 기존 퍼플 테마와
+   어긋나지 않는다. */
 .topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 2rem;
-  background: var(--card);
-  border-bottom: var(--bd) solid var(--outline-variant);
+  padding: 0.9rem 2rem;
+  background: var(--accent);
+  box-shadow: 0 10px 24px rgba(45, 27, 105, 0.22);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -135,18 +140,19 @@ button { font-family: inherit; cursor: pointer; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.75rem;
   text-decoration: none;
-  color: var(--ink);
-  font-weight: 800;
-  font-size: 1.35rem;
+  color: var(--on-accent);
   letter-spacing: -0.01em;
 }
+.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-name { font-size: 1.45rem; font-weight: 900; color: var(--on-accent); }
+.brand-sub { font-size: 0.8rem; font-weight: 600; color: #C6B6F0; }
 
 .brand-icon {
   font-size: 1.5rem;
-  width: 3rem;
-  height: 3rem;
+  width: 46px;
+  height: 46px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -171,6 +177,20 @@ button { font-family: inherit; cursor: pointer; }
 .icon-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-hi); }
 .icon-btn:active { transform: translateY(3px); box-shadow: var(--shadow-press); }
 .icon-btn.fav-on { background: var(--sun); border-color: var(--sun-ink); }
+
+/* 상단바 안에서는 색을 채운 버튼 — 자매 사이트 헤더 버튼과 같은 인상.
+   단, 채움색은 퍼플이 아니라 밝은 라벤더로 둔다. 이 사이트의 아이콘 세트
+   (Streamline Plump Color)는 밝은 배경용 다색 아이콘이라, 퍼플 위에 얹으면
+   집 모양 윤곽선이 배경에 묻혀 버린다. */
+.topbar .icon-btn {
+  background: var(--accent-soft);
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow: none;
+  width: 3rem;
+  height: 3rem;
+}
+.topbar .icon-btn:hover { background: #f2ebff; transform: translateY(-1px); box-shadow: none; }
+.topbar .icon-btn:active { transform: translateY(1px); box-shadow: none; }
 
 main {
   max-width: 1180px;
