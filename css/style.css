@@ -124,12 +124,17 @@ button { font-family: inherit; cursor: pointer; }
    띠 색만 자매의 네이비 대신 이 사이트의 퍼플을 쓴다.
    넷을 나란히 놓으면 같은 리듬으로 읽히고, 사이트 안에서는 기존 퍼플 테마와
    어긋나지 않는다. */
+/* 폭·좌우 여백은 main 과 똑같이 맞춘다 — 자매 사이트도 상단바가 화면 끝까지
+   가지 않고 본문과 같은 상자 안에 들어와 있다. max-width·가로 padding 을
+   main 과 다른 값으로 두면 로고와 첫 카드의 왼쪽 선이 어긋난다. */
 .topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.9rem 2rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0.9rem var(--gutter);
   background: var(--accent);
   box-shadow: 0 10px 24px rgba(45, 27, 105, 0.22);
   position: sticky;
@@ -205,6 +210,24 @@ main {
   margin: 0 auto;
   padding: var(--gutter);
 }
+
+/* ── 안내 문구 (상단바 바로 아래 흰 띠) ──
+   자매 사이트와 같은 자리·같은 역할. 홈 화면 안에 두어 활동 중에는 저절로
+   사라지게 한다. 음수 마진으로 main 의 가로 padding 을 되돌려, 띠의 좌우 끝이
+   상단바 끝과 정확히 맞는다. */
+.cta-strip {
+  background: var(--card);
+  border-bottom: 1px solid var(--outline-variant);
+  margin: calc(-1 * var(--gutter)) calc(-1 * var(--gutter)) var(--stack-gap);
+  padding: 0.85rem var(--gutter);
+}
+.cta-copy {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.cta-copy b { color: var(--accent); font-weight: 900; }
 
 /* ── 공통 버튼 ── */
 .btn {
@@ -699,8 +722,9 @@ main {
 @media (max-width: 640px) {
   html { font-size: 16px; }
   :root { --card-padding: 24px; --gutter: 20px; --stack-gap: 16px; --margin-edge: 24px; }
-  .topbar { padding: 0.8rem 1rem; }
+  .topbar { padding: 0.8rem 1.2rem; }   /* main 과 같은 가로 여백 */
   main { padding: 1.2rem; }
+  .cta-strip { padding: 0.8rem 1.2rem; }
   .type-grid { gap: 1rem; }
   .stage-body { padding: 1.4rem 1.2rem; }
   .play-bottom { flex-direction: column; }
@@ -716,5 +740,9 @@ main {
 @media (min-width: 1600px) {
   html { font-size: 23px; }
   main { max-width: 1560px; padding: var(--gutter) var(--margin-edge); }
-  .topbar { padding: 0.7rem var(--gutter); }
+  .topbar { max-width: 1560px; padding: 0.7rem var(--margin-edge); }
+  .cta-strip {
+    margin: calc(-1 * var(--gutter)) calc(-1 * var(--margin-edge)) var(--stack-gap);
+    padding: 0.85rem var(--margin-edge);
+  }
 }
