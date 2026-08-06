@@ -1,5 +1,18 @@
 # 📖 짬짬이 이야기
 
+> [!IMPORTANT]
+> **소스는 이 저장소가 아닙니다.** 코드는
+> [`shway81-droid/jjam-classroom`](https://github.com/shway81-droid/jjam-classroom) 의
+> `story/` 폴더에 있습니다. 고칠 일이 있으면 거기서 고치세요.
+>
+> 여기는 **발행만** 맡습니다. GitHub Pages 주소가 저장소 이름에서 나오기 때문에
+> (`github.io/jjam-story/`), 선생님들이 쓰던 주소를 지키려고 이 저장소를 남겨 두었습니다.
+> `.github/workflows/publish.yml` 이 상류를 받아다 배포합니다.
+>
+> 아래 내용과 이 저장소의 `main` 은 **합치기 전 기록**입니다. 여기서 고쳐도 사이트에
+> 반영되지 않습니다.
+
+
 > 수업 전후 3~7분 자투리 시간, 짧은 이야기 하나로 학생이 생각하고 말하게 하는 전자칠판용 웹서비스.
 > 짬짬이 [게임](https://shway81-droid.github.io/jjam/) · [퀴즈](https://shway81-droid.github.io/jjam-quiz/) · [영상](https://shway81-droid.github.io/jjam-video/)의 자매 프로젝트입니다.
 
